@@ -1,0 +1,58 @@
+
+###10. Crear el endpoint que permita obtener el total del stock actual de productos, la sumatoria de los precios individuales.
+GET http://localhost:1234/productos/totalStock
+
+### 1. Crear el endpoint ‘/usuarios/’, que devuelva el listado completo de usuarios.
+GET http://localhost:1234/usuarios/
+
+### 2.Crear el endpoint ‘/usuarios/id’ que devuelva los datos de un usuario en particular consignado porsu número de id.
+GET http://localhost:1234/usuarios/3
+
+###3. Crear el endpoint ‘/usuarios/’ que permita guardar un nuevo usuario.
+POST http://localhost:1234/usuarios/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEzLCJ1c3VhcmlvIjoiZnJhbmtrby52aWxsYSIsIm5pdmVsIjoxLCJleHAiOjE2OTcxNzIwNzQ3MDMsImlhdCI6MTY5NzE3MjAxNH0.xAoDYwdv6PekT0QZxplKIVMkReLorhKTpeUdvWVvjyQ
+
+{
+    "nombres": "Dario",
+    "apellidos": "Villarruel",
+    "email": "frankko.villa@gmail.com",
+    "telefono": "264-4-447017"
+}
+###4. Crear el endpoint ‘/usuarios/id’ que permita modificar algún atributo de un usuario.
+PATCH http://localhost:1234/usuarios/4
+Content-Type: application/json
+uthorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEzLCJ1c3VhcmlvIjoiZnJhbmtrby52aWxsYSIsIm5pdmVsIjoxLCJleHAiOjE2OTcxNzIwNzQ3MDMsImlhdCI6MTY5NzE3MjAxNH0.xAoDYwdv6PekT0QZxplKIVMkReLorhKTpeUdvWVvjyQ
+
+{
+    "nombre": "Nombre Nuevo"
+}
+###5. Crear el endpoint ‘/usuarios/id’ que permita borrar un usuario de los datos.
+DELETE http://localhost:1234/usuarios/16
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEzLCJ1c3VhcmlvIjoiZnJhbmtrby52aWxsYSIsIm5pdmVsIjoxLCJleHAiOjE2OTcxNzIzODQyNjAsImlhdCI6MTY5NzE3MjMyNH0.OYbJaodvRcx6Exkuh5JoOWsrmfDe9-cswNOK9H7616M
+
+
+###6. Crear el endpoint que permita obtener el precio de un producto que se indica por id.
+GET http://localhost:1234/productos/precio/2
+
+###7. Crear el endpoint que permita obtener el nombre de un producto que se indica por id.
+GET http://localhost:1234/productos/nombre/3
+
+###8. Crear el endpoint que permita obtener el teléfono de un usuario que se indica por id.
+GET http://localhost:1234/usuarios/telefono/7
+
+###9. Crear el endpoint que permita obtener el nombre de un usuario que se indica por id.
+GET http://localhost:1234/usuarios/nombre/8
+
+
+###
+###
+POST http://localhost:1234/auth
+Content-Type: application/json
+
+{
+    "usuario" : "frankko.villa",
+    "password" : "37647338"
+}
+
